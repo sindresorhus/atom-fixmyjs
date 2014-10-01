@@ -30,11 +30,15 @@ function run() {
 		return;
 	}
 
+	var cursorPosition = editor.getCursorBufferPosition();
+
 	if (selectedText) {
 		editor.setTextInBufferRange(editor.getSelectedBufferRange(), retText);
 	} else {
 		editor.setText(retText);
 	}
+
+	editor.setCursorBufferPosition(cursorPosition);
 }
 
 plugin.configDefaults = {
