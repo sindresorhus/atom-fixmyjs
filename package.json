@@ -1,0 +1,23 @@
+{
+  "name": "fixmyjs",
+  "version": "0.0.0",
+  "description": "Automagically fix JSHint lint warnings",
+  "license": "MIT",
+  "repository": "sindresorhus/atom-fixmyjs",
+  "private": true,
+  "activationEvents": [
+    "FixMyJS"
+  ],
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "atom": ">=0.120.0"
+  },
+  "dependencies": {
+    "fixmyjs": "^0.13.2",
+    "jshint": "^2.5.6"
+  }
+}
