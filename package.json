@@ -14,7 +14,7 @@
     "url": "http://sindresorhus.com"
   },
   "engines": {
-    "atom": ">=0.120.0"
+    "atom": ">=0.135.0"
   },
   "dependencies": {
     "fixmyjs": "^0.13.2",
