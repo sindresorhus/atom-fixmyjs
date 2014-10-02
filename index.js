@@ -12,7 +12,7 @@ function run() {
 
 	var retText = '';
 	var file = editor.getUri();
-	var config = jshintCli.getConfig(file);
+	var config = file ? jshintCli.getConfig(file) : {};
 	var selectedText = editor.getSelectedText();
 	var text = selectedText || editor.getText();
 
