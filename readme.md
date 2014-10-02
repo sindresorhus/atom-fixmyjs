@@ -20,7 +20,7 @@ Or Settings → Packages → Search for `fixmyjs`
 
 ## Usage
 
-Open the Command Palette, and type `FixMyJS`.
+Open the Command Palette, and type `fixmyjs`.
 
 Can also be run on just a selection. For example the code in a `<script>` tag.
 
