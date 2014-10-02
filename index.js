@@ -46,5 +46,5 @@ plugin.configDefaults = {
 };
 
 plugin.activate = function () {
-	return atom.workspaceView.command('FixMyJS', run);
+	atom.workspaceView.command('FixMyJS', run);
 };
