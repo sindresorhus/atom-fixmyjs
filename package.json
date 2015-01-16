@@ -1,6 +1,6 @@
 {
   "name": "fixmyjs",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Automagically fix JSHint lint warnings",
   "license": "MIT",
   "repository": "sindresorhus/atom-fixmyjs",
