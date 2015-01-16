@@ -17,7 +17,7 @@
     "atom": ">=0.135.0"
   },
   "dependencies": {
-    "fixmyjs": "^0.13.2",
+    "fixmyjs": "^1.0.x",
     "jshint": "^2.5.6"
   }
 }
