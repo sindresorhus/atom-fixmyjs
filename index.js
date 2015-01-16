@@ -3,7 +3,7 @@ var fixmyjs = require('fixmyjs');
 var jshintCli = require('jshint/src/cli');
 
 function init() {
-	var editor = atom.workspace.getActiveEditor();
+	var editor = atom.workspace.getActiveTextEditor();
 
 	if (!editor) {
 		return;
@@ -49,5 +49,5 @@ exports.config = {
 };
 
 exports.activate = function () {
-	atom.workspaceView.command('FixMyJS', init);
+	atom.commands.add('atom-workspace', 'FixMyJS', init);
 };
