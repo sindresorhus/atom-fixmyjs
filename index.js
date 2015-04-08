@@ -9,7 +9,7 @@ function init() {
 		return;
 	}
 
-	var file = editor.getUri();
+	var file = editor.getURI();
 	var config = file ? jshintCli.getConfig(file) : {};
 	var selectedText = editor.getSelectedText();
 	var text = selectedText || editor.getText();
@@ -49,5 +49,5 @@ exports.config = {
 };
 
 exports.activate = function () {
-	atom.commands.add('atom-workspace', 'FixMyJS', init);
+	atom.commands.add('atom-text-editor', 'FixMyJS', init);
 };
