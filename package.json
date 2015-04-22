@@ -16,6 +16,13 @@
   "engines": {
     "atom": ">=0.190.0"
   },
+  "keywords": [
+    "javascript",
+    "format",
+    "beautify",
+    "prettify",
+    "jshint"
+  ],
   "dependencies": {
     "fixmyjs": "^1.0.2",
     "jshint": "^2.5.6"
