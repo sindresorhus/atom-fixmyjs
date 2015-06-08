@@ -49,5 +49,5 @@ exports.config = {
 };
 
 exports.activate = function () {
-	atom.commands.add('atom-text-editor', 'FixMyJS', init);
+	atom.commands.add('atom-workspace', 'FixMyJS', init);
 };

@@ -6,7 +6,7 @@
   "repository": "sindresorhus/atom-fixmyjs",
   "private": true,
   "activationCommands": {
-    "atom-text-editor": "FixMyJS"
+    "atom-workspace": "FixMyJS"
   },
   "author": {
     "name": "Sindre Sorhus",
