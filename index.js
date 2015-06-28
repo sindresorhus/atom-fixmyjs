@@ -1,23 +1,23 @@
-'use strict';
-var fixmyjs = require('fixmyjs');
-var jshintCli = require('jshint/src/cli');
+'use babel';
+import fixmyjs from 'fixmyjs';
+import jshintCli from 'jshint/src/cli';
 
 function init() {
-	var editor = atom.workspace.getActiveTextEditor();
+	const editor = atom.workspace.getActiveTextEditor();
 
 	if (!editor) {
 		return;
 	}
 
-	var file = editor.getURI();
-	var config = file ? jshintCli.getConfig(file) : {};
-	var selectedText = editor.getSelectedText();
-	var text = selectedText || editor.getText();
-	var retText = '';
+	const file = editor.getURI();
+	const config = file ? jshintCli.getConfig(file) : {};
+	const selectedText = editor.getSelectedText();
+	const text = selectedText || editor.getText();
+	let retText = '';
 
 	try {
 		if (atom.config.get('fixmyjs.legacy')) {
-			var jshint = require('jshint').JSHINT;
+			const jshint = require('jshint').JSHINT;
 			jshint(text, config);
 			retText = fixmyjs(jshint.data(), text).run();
 		} else {
@@ -29,7 +29,7 @@ function init() {
 		return;
 	}
 
-	var cursorPosition = editor.getCursorBufferPosition();
+	const cursorPosition = editor.getCursorBufferPosition();
 
 	if (selectedText) {
 		editor.setTextInBufferRange(editor.getSelectedBufferRange(), retText);
@@ -40,7 +40,7 @@ function init() {
 	editor.setCursorBufferPosition(cursorPosition);
 }
 
-exports.config = {
+export let config = {
 	legacy: {
 		type: 'boolean',
 		default: true,
@@ -48,6 +48,6 @@ exports.config = {
 	}
 };
 
-exports.activate = function () {
+export let activate = () => {
 	atom.commands.add('atom-workspace', 'FixMyJS', init);
 };
