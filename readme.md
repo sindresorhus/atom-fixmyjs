@@ -1,7 +1,5 @@
 # fixmyjs
 
-[Atom package](https://atom.io/packages/fixmyjs)
-
 > Automagically fix JSHint lint warnings using [fixmyjs](https://github.com/jshint/fixmyjs)
 
 <img src="https://cloud.githubusercontent.com/assets/170270/4474662/ceab387a-4962-11e4-99ab-17dd5c44847c.gif" width="399">
@@ -11,11 +9,11 @@
 
 ## Install
 
-```sh
+```
 $ apm install fixmyjs
 ```
 
-Or Settings → Packages → Search for `fixmyjs`
+Or Settings → Install → Search for `fixmyjs`
 
 
 ## Usage
