@@ -1,4 +1,4 @@
-'use babel';
+/** @babel */
 import fixmyjs from 'fixmyjs';
 import jshintCli from 'jshint/src/cli';
 
@@ -40,7 +40,7 @@ function init() {
 	editor.setCursorBufferPosition(cursorPosition);
 }
 
-export let config = {
+export const config = {
 	legacy: {
 		type: 'boolean',
 		default: true,
@@ -48,6 +48,6 @@ export let config = {
 	}
 };
 
-export let activate = () => {
+export const activate = () => {
 	atom.commands.add('atom-workspace', 'FixMyJS', init);
 };

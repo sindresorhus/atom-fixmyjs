@@ -5,16 +5,19 @@
   "license": "MIT",
   "repository": "sindresorhus/atom-fixmyjs",
   "private": true,
-  "activationCommands": {
-    "atom-workspace": "FixMyJS"
-  },
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
   },
+  "activationCommands": {
+    "atom-workspace": "FixMyJS"
+  },
   "engines": {
-    "atom": ">=1.0.0"
+    "atom": ">=1.0.11"
+  },
+  "scripts": {
+    "test": "xo"
   },
   "keywords": [
     "javascript",
@@ -26,5 +29,17 @@
   "dependencies": {
     "fixmyjs": "^1.0.2",
     "jshint": "^2.5.6"
+  },
+  "devDependencies": {
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true,
+    "globals": [
+      "atom"
+    ],
+    "ignores": [
+      "fixture*"
+    ]
   }
 }
