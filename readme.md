@@ -13,12 +13,12 @@
 $ apm install fixmyjs
 ```
 
-Or Settings → Install → Search for `fixmyjs`
+Or, Settings → Install → Search for `fixmyjs`
 
 
 ## Usage
 
-Open the Command Palette, and type `fixmyjs`.
+Open the Command Palette and type `fixmyjs`.
 
 Can also be run on just a selection. For example the code in a `<script>` tag.
 
@@ -27,7 +27,7 @@ Can also be run on just a selection. For example the code in a `<script>` tag.
 
 By default, this plugin uses the FixMyJS `legacy` mode. This option uses the last stable version of the module which uses JSHint to detect errors in your code and fix them.
 
-It does not include all of the fixes the current version of FixMyJS exposes, but does do a much better job of preserving source formatting. Legacy mode can be disabled in the Settings.
+It does not include all of the fixes the current version of FixMyJS exposes, but does do a much better job of preserving source formatting. Legacy mode can be switched off in the settings.
 
 
 ## License
