@@ -37,9 +37,6 @@
     "esnext": true,
     "globals": [
       "atom"
-    ],
-    "ignores": [
-      "fixture*"
     ]
   }
 }
