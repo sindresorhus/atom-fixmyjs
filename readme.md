@@ -30,6 +30,16 @@ By default, this plugin uses the FixMyJS `legacy` mode. This option uses the las
 It does not include all of the fixes the current version of FixMyJS exposes, but does do a much better job of preserving source formatting. Legacy mode can be switched off in the settings.
 
 
+## Keyboard shortcut
+
+Set the keyboard shortcut you want in your [keymap](http://flight-manual.atom.io/using-atom/sections/basic-customization/#customizing-keybindings):
+
+```cson
+'atom-text-editor':
+	'cmd-shift-x': 'FixMyJS'
+```
+
+
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

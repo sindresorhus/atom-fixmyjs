@@ -4,15 +4,12 @@
   "description": "Automagically fix JSHint lint warnings",
   "license": "MIT",
   "repository": "sindresorhus/atom-fixmyjs",
-  "private": true,
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
   },
-  "activationCommands": {
-    "atom-workspace": "FixMyJS"
-  },
+  "private": true,
   "engines": {
     "atom": ">=1.0.11"
   },
@@ -32,6 +29,9 @@
   },
   "devDependencies": {
     "xo": "*"
+  },
+  "activationCommands": {
+    "atom-workspace": "FixMyJS"
   },
   "xo": {
     "esnext": true,
