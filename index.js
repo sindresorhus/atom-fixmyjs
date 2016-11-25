@@ -1,14 +1,9 @@
 /** @babel */
+import {CompositeDisposable} from 'atom';
 import fixmyjs from 'fixmyjs';
 import jshintCli from 'jshint/src/cli';
 
-function init() {
-	const editor = atom.workspace.getActiveTextEditor();
-
-	if (!editor) {
-		return;
-	}
-
+function init(editor) {
 	const file = editor.getURI();
 	const config = file ? jshintCli.getConfig(file) : {};
 	const selectedText = editor.getSelectedText();
@@ -25,19 +20,26 @@ function init() {
 		}
 	} catch (err) {
 		console.error(err);
-		atom.beep();
+		atom.notifications.addError('FixMyJS', {detail: err.message});
 		return;
 	}
 
 	const cursorPosition = editor.getCursorBufferPosition();
+	const line = atom.views.getView(editor).getFirstVisibleScreenRow() +
+		editor.displayBuffer.getVerticalScrollMargin();
 
 	if (selectedText) {
 		editor.setTextInBufferRange(editor.getSelectedBufferRange(), retText);
 	} else {
 		editor.setText(retText);
+		editor.getBuffer().setTextViaDiff(retText);
 	}
 
 	editor.setCursorBufferPosition(cursorPosition);
+
+	if (editor.getScreenLineCount() > line) {
+		editor.scrollToScreenPosition([line, 0]);
+	}
 }
 
 export const config = {
@@ -48,6 +50,18 @@ export const config = {
 	}
 };
 
+export function deactivate() {
+	this.subscriptions.dispose();
+}
+
 export const activate = () => {
-	atom.commands.add('atom-workspace', 'FixMyJS', init);
+	this.subscriptions = new CompositeDisposable();
+
+	this.subscriptions.add(atom.commands.add('atom-workspace', 'FixMyJS', () => {
+		const editor = atom.workspace.getActiveTextEditor();
+
+		if (editor) {
+			init(editor);
+		}
+	}));
 };
