@@ -15,6 +15,12 @@ $ apm install fixmyjs
 
 Or, Settings → Install → Search for `fixmyjs`
 
+If you get an error after installing (you probably did) this package do the following. run the following command:
+```
+npm install in ~/.atom/packages/fixmyjs
+```
+
+There is an issue with atom where it cannot install a dependacy with its own name.
 
 ## Usage
 
