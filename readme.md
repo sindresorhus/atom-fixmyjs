@@ -2,7 +2,7 @@
 
 > Automagically fix JSHint lint warnings using [fixmyjs](https://github.com/jshint/fixmyjs)
 
-<img src="https://cloud.githubusercontent.com/assets/170270/4474662/ceab387a-4962-11e4-99ab-17dd5c44847c.gif" width="399">
+<img src="screenshot.gif" width="399">
 
 *Issues with the output should be reported on the fixmyjs [issue tracker](https://github.com/jshint/fixmyjs/issues).*
 
